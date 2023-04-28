@@ -1,24 +1,22 @@
-# README
+# STORE_BACKEND
+* Ruby version 3.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DEVELOP SETUP
 
-Things you may want to cover:
+```sh
+bundle install
+bundle exec rake app:update:bin
+```
 
-* Ruby version
+## To run store_backend server
 
-* System dependencies
+```
+ bundle exec rails s -p 3000
+```
 
-* Configuration
+# TESTING
+## Run tests
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rspec
+```
