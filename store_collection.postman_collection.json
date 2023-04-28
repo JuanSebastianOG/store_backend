@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "f0939d25-afd3-40d8-aceb-96de3592ecbd",
+		"name": "store_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17708313"
+	},
+	"item": [
+		{
+			"name": "Create store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/stores?name=O M G Store&url=omgstore.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"stores"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "O M G Store"
+						},
+						{
+							"key": "url",
+							"value": "omgstore.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products?name=product1&sku=1111&inventory_quantity=10&store_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "product1"
+						},
+						{
+							"key": "sku",
+							"value": "1111"
+						},
+						{
+							"key": "inventory_quantity",
+							"value": "10"
+						},
+						{
+							"key": "store_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All products from store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products?store_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "store_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/1?store_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "store_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory quantity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/1/inventory?store_id=1&inventory_quantity=10000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "store_id",
+							"value": "1"
+						},
+						{
+							"key": "inventory_quantity",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
