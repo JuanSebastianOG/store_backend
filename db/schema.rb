@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_27_005609) do
+ActiveRecord::Schema.define(version: 2023_04_28_022456) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "sku"
     t.integer "inventory_quantity"
-    t.time "inventory_updated_time"
+    t.datetime "inventory_updated_time"
     t.integer "store_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
